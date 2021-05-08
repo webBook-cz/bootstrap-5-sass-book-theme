@@ -1,0 +1,26 @@
+title = "Rainlab-blog"
+url = "/blog"
+layout = "blog"
+meta_title = "Blog"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "plugins/rainlab-category"
+postPage = "plugins/rainlab-post"
+==
+<section class="blog">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+			    <div class="">
+		            <h1 >Blog</h1>
+			    </div>
+			</div>
+		</div>
+	</div>
+	{% partial 'blog/blog-list' %}
+</section>

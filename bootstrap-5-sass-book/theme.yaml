@@ -1,0 +1,12 @@
+name: Bootstrap-5-Sass-Book
+description: 'Bootstrap 5 sass customizable'
+author: webBook
+homepage: webbook.page
+author_code: ''
+code: bootstrap-sass-book
+parent: ''
+database: '0'
+form: fields.yaml
+require:
+    - Martin.Forms
+    - WebBook.Checkcontent

@@ -1,0 +1,27 @@
+title = "Posts with Tag"
+url = "/tag/:tag/:page?"
+layout = "blog"
+is_hidden = 0
+
+[viewBag]
+
+[postsWithTag]
+tag = "{{ :tag }}"
+orderBy = "published_at asc"
+page = "{{ :page }}"
+resultsPerPage = 5
+postPage = "plugins/rainlab-post"
+categoryPage = "plugins/rainlab-category"
+==
+<section class="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="res">
+                    <h1>{{ "ginopane.blogtaxonomy::lang.components.tag_posts.posts_with_tag" | trans }} „{{ postsWithTag.tag.name }}“</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% partial 'blog/blog-list' %}
+</section>

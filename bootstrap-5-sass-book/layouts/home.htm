@@ -1,0 +1,24 @@
+==
+<!doctype html>
+<html lang="{{ this.theme.site_locale }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ this.page.title }} | {{ this.theme.site_title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% partial 'site/styles' %}
+    {% if this.theme.google_analytics %}
+        {% partial 'site/ga'  trackingID = this.theme.google_analytics %}
+    {% endif %}
+</head>
+<body id="body">
+    {% partial 'site/header' %}
+    {% partial 'site/nav-home' %}
+    <main class="web-main py-3">
+        <div class="container">
+            {% page %}
+        </div>
+    </main>
+    {% partial 'site/footer' %}
+    {% partial 'site/scripts' %}
+</body>
+</html>

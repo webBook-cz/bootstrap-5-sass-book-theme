@@ -1,0 +1,25 @@
+==
+<!doctype html>
+<html lang="{{ this.theme.site_locale }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ this.page.title }} | {{ this.theme.site_title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% partial 'site/styles' %}
+    {% if this.theme.google_analytics %}
+        {% partial 'site/ga'  trackingID = this.theme.google_analytics %}
+    {% endif %}
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100" id="body">
+    {% partial 'demo/nav-demo' %}
+    {% page %}
+    <script src="{{[
+            'assets/js/bootstrap.bundle.min.js',
+            '@framework',
+            '@framework.extras',
+            'assets/js/site.js',
+        ] | theme }}"></script>
+    {% scripts %}
+</body>
+</html>

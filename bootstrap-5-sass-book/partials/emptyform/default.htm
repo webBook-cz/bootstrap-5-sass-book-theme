@@ -2,26 +2,58 @@
 <form data-request="{{ __SELF__ }}::onFormSubmit">
       {{ form_token() }}
       <div id="{{ __SELF__ }}_forms_flash"></div>
-      <div; class="tohide">
-    	<div class="form-label-group">
-    	    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required="">
-    	    <label for="inputEmail">Email address</label>
-    	</div>
+      <div class="tohide">
 
-    	<div class="form-label-group">
-    	    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-    	    <label for="inputPassword">Password</label>
-    	</div>
-        <div class="form-label-group">
-            <textarea class="form-control" id="inputContent" rows="3" name="content" placeholder="Your text here"></textarea>
-            <label for="inputContent">Your text here</label>
+        <div class="form-floating mb-2">
+          <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
         </div>
 
-    	<div class="custom-control custom-checkbox mb-3">
-    	      <input type="checkbox" class="custom-control-input" value="agree" name="agreement" id="agreement">
-              <label class="custom-control-label" for="agreement">I agree with conditions</label>
-    	</div>
+        <div class="form-floating mb-2">
+          <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
 
-    	<button class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
-      </div>
+        <div class="form-floating mb-2">
+            <textarea class="form-control" id="floatingContent" name="content" placeholder="Your text here"></textarea>
+            <label for="floatingContent">Your text here</label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            I agree with conditions
+          </label>
+        </div>
+        {#<div class="custom-control text-end">
+          <button class="btn btn-lg btn-primary float-right w-50" type="submit">Send</button>
+        </div>#}
+        <div class="d-grid gap-2">
+          <button class="btn btn-lg btn-primary" type="submit">Send</button>
+        </div>
+      
+    </div>
 </form>
+
+{% put styles %}
+<style>
+  #floatingContent {
+    height: 150px;
+  }
+  button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    position: absolute;
+    right: 0.75em;
+  }
+  .alert p {
+    margin-bottom: 0;
+  }
+</style>
+{% endput %}

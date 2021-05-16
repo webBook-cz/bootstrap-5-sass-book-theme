@@ -5,19 +5,23 @@
     <meta charset="UTF-8">
     <title>{{ this.page.title }} | {{ this.theme.site_title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     {% partial 'site/styles' %}
     {% if this.theme.google_analytics %}
         {% partial 'site/ga'  trackingID = this.theme.google_analytics %}
     {% endif %}
 </head>
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100" id="body">
-    {% partial 'demo/nav-demo' %}
-    {% page %}
-    <script src="{{[
-            'assets/js/bootstrap.bundle.min.js',
-            'assets/js/site.js',
-        ] | theme }}"></script>
-    {% scripts %}
+<body id="body">
+    {% partial 'site/header' %}
+    {% partial 'home/nav-home' %}
+    <main class="web-main">
+        {% page %}
+    </main>
+    {% partial 'site/footer' %}
+    <script   src="https://code.jquery.com/jquery-3.5.1.min.js"
+              integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+              crossorigin="anonymous"></script>
+    {% framework extras %}
+    {% partial 'site/scripts' %}
+
 </body>
 </html>

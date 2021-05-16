@@ -7,7 +7,7 @@
 ////webBook Download plugin styling 
 //@import "webbook/download";
 ////webBook 404 
-//@import "webbook/404";
+@import "webbook/404";
 ////Rainlab Blog plugin styling 
 //@import "plugins/rainlab-blog";
 
@@ -27,6 +27,10 @@
 .carousel {
   margin-bottom: 4rem;
 }
+//space for fixed header 
 
+.header-space {
+	margin-top: 80px;
+}
 
 @import "webbook/custom";

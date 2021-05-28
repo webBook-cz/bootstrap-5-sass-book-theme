@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>{{ this.page.title }} | {{ this.theme.site_title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon">
     {% partial 'site/styles' %}
     {% if this.theme.google_analytics %}
         {% partial 'site/ga'  trackingID = this.theme.google_analytics %}

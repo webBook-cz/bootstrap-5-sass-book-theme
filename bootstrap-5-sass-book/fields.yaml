@@ -207,6 +207,22 @@ tabs:
             default: Footer text
 
 
+        background_color:
+            label: Background Colour
+            tab: Colours & Settings
+            type: colorpicker
+            default: '#fff'
+            assetVar: 'colour-background'
+        text_color:
+            label: Text Colour
+            tab: Colours & Settings
+            type: colorpicker
+            default: '#212529'
+            assetVar: 'colour-text'
+        info_section_04:
+            tab: Colours & Settings
+            type: section
+            cssClass: "p-t-0"
         primary_color:
             label: Primary Colour
             tab: Colours & Settings
@@ -255,22 +271,117 @@ tabs:
             tab: Colours & Settings
             default: '#1e2b37'
             assetVar: 'colour-dark'
+
+        info_section_05:
+            tab: Bootstrap vars
+            label: "Settings"
+            type: section
+            cssClass: "p-a m-y control-scrollpanel"
+
         rounded:
             label: Rounded
             type: switch
-            tab: Colours & Settings
+            tab: Bootstrap vars
             default: true
             assetVar: 'rounded'
-            span: auto
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
         gradients:
             label: Gradients
             type: switch
-            tab: Colours & Settings
+            tab: Bootstrap vars
             default: false
             assetVar: 'gradients'
-            span: auto
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+        shadows:
+            label: Shadows
+            type: switch
+            tab: Bootstrap vars
+            default: true
+            assetVar: 'shadows'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+        transitions:
+            label: Transitions
+            type: switch
+            tab: Bootstrap vars
+            default: true
+            assetVar: 'transitions'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+        smooth-scroll:
+            label: Smooth-scroll
+            type: switch
+            tab: Bootstrap vars
+            default: true
+            assetVar: 'smooth-scroll'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+        negative-margins:
+            label: Negative-margins
+            type: switch
+            tab: Bootstrap vars
+            default: false
+            assetVar: 'negative-margins'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
 
-        info_section:
+        border-radius:
+            label: Border-radius
+            type: text
+            tab: Bootstrap vars
+            default: '.25rem'
+            assetVar: 'border-radius'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
+        spacer:
+            label: Spacer
+            type: text
+            tab: Bootstrap vars
+            default: '1rem'
+            assetVar: 'spacer'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
+        link-color:
+            label: Link (#hex or primary)
+            type: text
+            tab: Bootstrap vars
+            default: 'primary'
+            assetVar: 'link-color'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
+        link-shade-percentage:
+            label: Link Shade
+            type: text
+            tab: Bootstrap vars
+            default: '20%'
+            assetVar: 'link-shade-percentage'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
+        link-decoration:
+            label: Link decoration
+            type: text
+            tab: Bootstrap vars
+            default: 'underline'
+            assetVar: 'link-decoration'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
+        link-hover-decoration:
+            label: Link hover decoration
+            type: text
+            tab: Bootstrap vars
+            default: null
+            assetVar: 'link-hover-decoration'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
+        info_section_06:
             tab: Bootstrap vars
             label: "Breakpoints & Container widths"
             type: section
@@ -367,7 +478,7 @@ tabs:
             span: storm
             cssClass: "col-sm-4 p-l-0"
 
-        info_section2:
+        info_section_07:
             tab: Bootstrap vars
             label: "Grid"
             type: section

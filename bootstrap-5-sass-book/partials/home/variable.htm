@@ -1,0 +1,15 @@
+==
+<?php
+function onStart()
+{
+   $this->viewBag->setProperty('myVar', 'My Value');
+}
+?>
+==
+<div class="container">
+	<section class="" id="">
+		<h1>VAR = {{ viewBag.myVar }}</h1>
+		<p>Variable is transfered from partial to Page (needs [viewBag] in layout)</p>
+	</section>
+	<hr>
+</div>

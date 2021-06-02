@@ -7,6 +7,14 @@ tabs:
             default: My new webpage
             comment: Used at site title
             span: auto
+        enable-bootswatch:
+            tab: General
+            label: Enable Bootswatch
+            type: switch
+            span: auto
+            default: false
+            comment: 'disables the most of settings - more info in assets/sass/bootswatch/readme'
+            assetVar: 'bootswatch'
         site_logo:
             tab: General
             label: Logo Image
@@ -16,7 +24,7 @@ tabs:
             fileTypes: jpg,jpeg,bmp,png,webp,gif,svg
             imageWidth: 240
             imageHeight: 90
-            span: auto
+            span: right
         copyright:
             tab: General
             label: Copyright 
@@ -39,7 +47,7 @@ tabs:
             label: Font name for text
             tab: General
             type: text
-            default: 'Montserrat, sans-serif'
+            default: '"Open Sans", sans-serif'
             assetVar: 'font-text'
             span: storm
             cssClass: "col-sm-6 p-l-0"
@@ -64,7 +72,7 @@ tabs:
             label: Font name for headings
             tab: General
             type: text
-            default: '"Roboto Slab", serif'
+            default: 'Oswald, sans-serif'
             assetVar: 'font-head'
             span: storm
             cssClass: "col-sm-6 p-l-0"
@@ -72,7 +80,7 @@ tabs:
             label: Font weight
             tab: General
             type: text
-            default: '400'
+            default: '500'
             assetVar: 'font-head-weight'
             span: storm
             cssClass: "col-sm-3 p-l-0"
@@ -89,9 +97,28 @@ tabs:
             tab: General
             label: Google fonts
             type: text
-            default: https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap
+            default: https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@500&display=swap
             comment: "Complete Link - if you want to use google fonts (eg: https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400&family=Oswald:wght@500&display=swap)"
 
+
+        font-size:
+            tab: General
+            label: Font size
+            type: text
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+            default: 1rem
+            assetVar: 'font-size-base'
+
+        text-align:
+            tab: General
+            label: Body Text Align
+            type: text
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+            default: null
+            assetVar: 'text-align'
+            comment: 'left, center, right or justify'
 
         font-responsive:
             tab: General
@@ -119,7 +146,7 @@ tabs:
             label: Google Analytics ID
             tab: General
             type: text
-            assetVar: 'font-head-weight'
+            assetVar: 'google-analytics'
             span: storm
             cssClass: "col-sm-3 p-l-0"
 
@@ -133,7 +160,7 @@ tabs:
             label: Headline
             type: text
             span: auto
-            default: "Bootstrap 4.6 SASS Theme"
+            default: "Bootstrap 5 SASS Theme"
         intro_subhead:
             tab: Intro / Footer
             label: Subhead
@@ -209,66 +236,66 @@ tabs:
 
         background_color:
             label: Background Colour
-            tab: Colours & Settings
+            tab: Colours
             type: colorpicker
             default: '#fff'
             assetVar: 'colour-background'
         text_color:
             label: Text Colour
-            tab: Colours & Settings
+            tab: Colours
             type: colorpicker
             default: '#212529'
             assetVar: 'colour-text'
         info_section_04:
-            tab: Colours & Settings
+            tab: Colours
             type: section
             cssClass: "p-t-0"
         primary_color:
             label: Primary Colour
-            tab: Colours & Settings
+            tab: Colours
             type: colorpicker
             default: '#2f3c48'
             assetVar: 'colour-primary'
         secondary_color:
             label: Secondary Colour
-            tab: Colours & Settings
+            tab: Colours
             type: colorpicker
             default: '#6f7f8c'
             assetVar: 'colour-secondary'
         success_color:
             label: Success Colour
-            tab: Colours & Settings
+            tab: Colours
             type: colorpicker
             default: '#3e4d59'
             assetVar: 'colour-success'
         info_color:
             label: Info color
             type: colorpicker
-            tab: Colours & Settings
+            tab: Colours
             default: '#5c8f94'
             assetVar: 'colour-info'
         warning_color:
             label: Warning color
             type: colorpicker
-            tab: Colours & Settings
+            tab: Colours
             default: '#6e9fa5'
             assetVar: 'colour-warning'
         danger_color:
             label: Danger color
             type: colorpicker
-            tab: Colours & Settings
+            tab: Colours
             default: '#cc330d'
             assetVar: 'colour-danger'
         light_color:
             label: Light color
             type: colorpicker
-            tab: Colours & Settings
+            tab: Colours
             default: '#eceeec'
             assetVar: 'colour-light'
         dark_color:
             label: Dark color
             type: colorpicker
-            tab: Colours & Settings
+            tab: Colours
             default: '#1e2b37'
             assetVar: 'colour-dark'
 
@@ -344,9 +371,26 @@ tabs:
             assetVar: 'spacer'
             span: storm
             cssClass: "col-sm-2 p-l-0"
+        validation-icons:
+            label: Validation Icons
+            type: switch
+            tab: Bootstrap vars
+            default: true
+            assetVar: 'validation-icons'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
+
+
+        info_section_06:
+            tab: Bootstrap vars
+            label: "Links"
+            type: section
+            cssClass: "p-a m-y control-scrollpanel"
+
 
         link-color:
-            label: Link (#hex or primary)
+            label: Link color (#hex or primary)
             type: text
             tab: Bootstrap vars
             default: 'primary'
@@ -354,12 +398,32 @@ tabs:
             span: storm
             cssClass: "col-sm-2 p-l-0"
 
+        hover-color:
+            label: Hover color (#hex or secondary)
+            type: text
+            tab: Bootstrap vars
+            default: null
+            assetVar: 'link-hov-color'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
+        darker-lighter:
+            label: Lighter/Darker
+            type: switch
+            tab: Bootstrap vars
+            assetVar: 'link-darker'
+            on: Light
+            off: Dark
+            comment: '(if hover color not defined)'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
         link-shade-percentage:
-            label: Link Shade
+            label: Link Hover Shade
             type: text
             tab: Bootstrap vars
             default: '20%'
-            assetVar: 'link-shade-percentage'
+            assetVar: 'link-shade'
             span: storm
             cssClass: "col-sm-2 p-l-0"
 
@@ -381,7 +445,7 @@ tabs:
             span: storm
             cssClass: "col-sm-2 p-l-0"
 
-        info_section_06:
+        info_section_07:
             tab: Bootstrap vars
             label: "Breakpoints & Container widths"
             type: section
@@ -478,7 +542,7 @@ tabs:
             span: storm
             cssClass: "col-sm-4 p-l-0"
 
-        info_section_07:
+        info_section_08:
             tab: Bootstrap vars
             label: "Grid"
             type: section

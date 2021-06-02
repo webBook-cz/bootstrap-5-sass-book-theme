@@ -37,8 +37,6 @@ $font-family-base: $font-text;
 $line-height-base: $font-text-height;
 $font-weight-normal: $font-text-weight;
 
-//$enable-responsive-font-sizes: $font-responsive;
-
 //$font-size-root:              null !default;
 //$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 //$font-weight-base:            $font-weight-normal !default;
@@ -70,7 +68,6 @@ $spacer:        $spacer;
 $border-radius: $border-radius;
 
 //$link-decoration:       $link-decoration;
-//$link-shade-percentage: $link-shade-percentage;   
 //$link-hover-decoration: $link-hover-decoration;   
 
 @if $link-color == 'primary' {
@@ -79,18 +76,30 @@ $border-radius: $border-radius;
     $link-color:  $link-color;
 }
 
-@if $link-shade-percentage == 'none' {
-   $link-hover-color:  $link-color;
+@if $link-hov-color == 'secondary' {
+    $link-hover-color:  $secondary;
+} @else if $link-hov-color {
+      @if $link-darker == 1 {
+          $link-hover-color:  lighten($link-color, $link-shade);
+      } @else {
+          $link-hover-color:  darken($link-color, $link-shade);
+      }
 } @else {
-    $link-hover-color: $warning;
+    $link-hover-color:  $link-hov-color;
 }
-//$link-hover-color: $secondary;
+
+
+@if $text-align == '' {
+  $body-text-align: null;
+}
+@else {
+   $body-text-align: $text-align;
+}
 //$enable-caret:                true !default;
 //$enable-reduced-motion:       true !default;
 //$enable-grid-classes:         true !default;
 //$enable-button-pointers:      true !default;
 //$enable-rfs:                  true !default;
-//$enable-validation-icons:     true !default;
 //$enable-deprecation-messages: true !default;
 //$enable-important-utilities:  true !default;
 
@@ -137,6 +146,12 @@ $border-radius: $border-radius;
     $enable-negative-margins:false;
 }
 
+@if $validation-icons == 1 {
+    $enable-validation-icons:true;
+} @else {
+    $enable-validation-icons:false;
+}
+
 $body-bg:                   $colour-background;
 $body-color:                $colour-text;
 
@@ -163,7 +178,17 @@ $grid-row-columns:      $row-columns;
 }
 
 // loading Bootstrap styles
-@import "bootstrap";
+
+//@import "bootstrap";
+
+
+@if $bootswatch == 1 {
+    @import "bootswatch/variables";
+    @import "bootstrap";
+    @import "bootswatch/bootswatch";
+} @else {
+    @import "bootstrap";
+}
 
 // Adding custom styling
 @import "theme";

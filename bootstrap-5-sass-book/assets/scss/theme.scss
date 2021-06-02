@@ -31,14 +31,7 @@
 	margin-top: 80px;
 }
 
-// Animation to fade in the dropdown menus
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-// Assigning the above animation to all dropdown menus
-
+// Assigning animation to all dropdown menus
 .dropdown-menu {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -53,8 +46,19 @@
 }
 
 .dropdown-menu.show {
-    max-height: 200px;
+    max-height: 300px;
     opacity: 1;
+}
+
+//link color hover animation
+
+@if $enable-transitions {
+  a {  
+      -webkit-transition: color .3s ease-out;
+      -moz-transition: color .3s ease-out;
+      -o-transition: color .3s ease-out;
+      transition: color .3s ease-out;
+  }
 }
 
 @import "webbook/custom";

@@ -1,0 +1,21 @@
+You can use any Bootswatch theme (bootswatch.com)
+
+1) Copy _variables.scss and _bootswatch.scss from your favorite theme to this folder and modify these files as follows:
+
+2) Delete all ' !default' from both files
+
+3) Comment lines with links to Google fonts, if some...
+eg: 
+// $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" !default;
+// @if $web-font-path {
+//   @import url($web-font-path);
+// }
+
+4) If you want to use fonts from the theme, copy the above link (https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap) 
+to "Google fonts" input in General tab of "customize" part of the template and specify Font Names for text and headings - or use fonts of your choice.
+
+5) Switch on 'Enable Bootswatch' switch *
+
+6) Enjoy!
+
+* - after switching, the most of Bootstrap settings will not work anymore since being overwritten by the theme...

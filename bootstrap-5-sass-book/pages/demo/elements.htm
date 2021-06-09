@@ -1,4 +1,4 @@
-title = "home"
+title = "Demo - elements"
 url = "/elements"
 layout = "demo"
 is_hidden = 0
@@ -283,7 +283,7 @@ is_hidden = 0
         <section id="cards" class="container pb-5">
             <div class="d-flex my-3">
                 <div class="jumbotron w-100 py-5 mx-auto">
-                    <h1>Bootstrap 5 SASS book Template</h1>
+                    <h1>Bootstrap 5 <a href="">SASS</a> book Template</h1>
                     <h4>You can easy change color, fonts and visual style within October CMS</h4>
                     <p class="lead">
                         Download <strong>Bootstrap 5 SASS book</strong> theme for free form October CMS website. You can test all the functionality on our website here:
@@ -623,7 +623,7 @@ is_hidden = 0
                 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
                   <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
                     <div class="toast-header">
-                      <img src="..." class="rounded me-2 bg-primary" alt="...">
+                      <img src="https://picsum.photos/30/30?random=6" class="rounded me-2 bg-primary" alt="...">
                       <strong class="me-auto">Bootstrap</strong>
                       <small>11 mins ago</small>
                       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
@@ -770,12 +770,12 @@ is_hidden = 0
                         </th>
                     </tr>
                     <tr>
-                      <td><div class="infotext">d-none d-sm-block</div><div data-toggle="tooltip" class="d-none d-sm-block" title="" data-original-title="hidden-xs-down"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div class="infotext">d-none d-md-block</div><div data-toggle="tooltip" class="d-none d-md-block" title="" data-original-title="hidden-sm-down"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div class="infotext">d-none d-lg-block</div><div data-toggle="tooltip" class="d-none d-lg-block" title="" data-original-title="hidden-md-down"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div class="infotext">d-none d-xl-block</div><div data-toggle="tooltip" class="d-none d-xl-block" title="" data-original-title="hidden-lg-down"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-block</div><div data-toggle="tooltip" class="d-block" title="" data-original-title="hidden-xs-down"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none d-sm-block</div><div data-toggle="tooltip" class="d-none d-sm-block" title="" data-original-title="hidden-sm-down"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none d-md-block</div><div data-toggle="tooltip" class="d-none d-md-block" title="" data-original-title="hidden-md-down"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none d-lg-block</div><div data-toggle="tooltip" class="d-none d-lg-block" title="" data-original-title="hidden-lg-down"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none d-xl-block</div><div data-toggle="tooltip" class="d-none d-xl-block" title="" data-original-title="hidden-xl-down"><i class="fas fa-dot-circle"></i></div></td>
                       <td><div class="infotext">d-none d-xxl-block</div><div data-toggle="tooltip" class="d-none d-xxl-block" title="" data-original-title="hidden-xl-down"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div class="infotext">d-none</div><div data-toggle="tooltip" class="d-none" title="" data-original-title="hidden-xl-down"><i class="fas fa-dot-circle"></i></div></td>
                     </tr>
                     <tr>
                       <td><div class="infotext">d-none</div><div data-toggle="tooltip" class="d-none" title="" data-original-title="hidden-xs-up"><i class="fas fa-dot-circle"></i></div></td>
@@ -808,6 +808,7 @@ is_hidden = 0
       </main>
 
 {% partial 'site/footer' %}
+{% partial 'demo/back-to-top' %}
 {% put styles %}
 <style>
     .infotext {

@@ -1,11 +1,12 @@
 name: Bootstrap-5-Sass-Book
-description: 'Bootstrap 5 sass customizable'
+description: "Bootstrap 5 October 2 template - customizable from backend - live SASS compilation.\r\n\r\nWith bootstrap icons, fontawesome and optional bootswatch themes support "
 author: webBook
 homepage: webbook.page
-author_code: ''
+authorCode: ''
 code: bootstrap-sass-book
 parent: ''
 database: '0'
+author_code: ''
 form: fields.yaml
 require:
     - Martin.Forms
